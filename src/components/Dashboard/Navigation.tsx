@@ -9,6 +9,7 @@ import { UserDropdown } from './UserDropdown';
 import { useLocation, useNavigate } from 'react-router-dom';
 import { useAuth } from '@/contexts/AuthContext';
 import { themeAtom, fontSizeAtom, languageAtom, selectedSiteAtom } from '@/shared/store/dashboardStore';
+import { useSites } from '@/entities/station';
 
 export const Navigation: React.FC = () => {
   const navigate = useNavigate();
@@ -54,8 +55,15 @@ export const Navigation: React.FC = () => {
     { key: 'large' as const, label: 'L' },
   ];
 
-  // Available sites - based on real data
-  const availableSites = ['R&T', 'SUNGNAM'];
+  // Get sites from API
+  const { data: sites = [] } = useSites();
+  
+  // Set initial selected site if not already set
+  React.useEffect(() => {
+    if (sites.length > 0 && !selectedSite) {
+      setSelectedSite(sites[0]);
+    }
+  }, [sites, selectedSite, setSelectedSite]);
 
   return (
     <nav className="fixed top-0 left-0 right-0 z-50 bg-card border-b border-border backdrop-blur-sm">
@@ -89,7 +97,7 @@ export const Navigation: React.FC = () => {
                 </PopoverTrigger>
                 <PopoverContent className="w-auto p-2" align="start" side="bottom" sideOffset={4}>
                   <div className="flex flex-col space-y-1">
-                    {availableSites.map((site) => (
+                    {sites.map((site) => (
                       <Button
                         key={site}
                         variant={selectedSite === site ? 'default' : 'ghost'}

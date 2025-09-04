@@ -17,6 +17,7 @@ import {
 } from '@/entities/stats/queries';
 import { useAtom } from 'jotai';
 import { languageAtom, selectedSiteAtom } from '@/shared/store/dashboardStore';
+import { useStationsBySite } from '@/entities/station';
 
 // CSV 데이터 파싱 함수
 const parseCSVData = (csvContent: string) => {
@@ -411,8 +412,8 @@ export const StatsTab: React.FC = () => {
   const [selectedMinuteDate, setSelectedMinuteDate] = useState<Date>(new Date());
   const [isMinuteDateCalendarOpen, setIsMinuteDateCalendarOpen] = useState(false);
 
-  // Generate station IDs for selected site (e.g., R&T1, R&T2, R&T3)
-  const stationIds = [`${selectedSite}1`, `${selectedSite}2`, `${selectedSite}3`];
+  // Get station IDs for selected site
+  const { data: stationIds = [] } = useStationsBySite(selectedSite);
 
   // Server data queries
   const { data: periodStatsData, isLoading: periodLoading, error: periodError } = useGetPeriodStatistics({
