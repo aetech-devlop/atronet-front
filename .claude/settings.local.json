@@ -1,0 +1,43 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(npm install:*)",
+      "Bash(npm run dev:*)",
+      "Bash(npx msw init:*)",
+      "Bash(rm:*)",
+      "Bash(npm run type-check:*)",
+      "Bash(npm run:*)",
+      "Bash(npx tsc:*)",
+      "Read(/C:\\Users\\aetech\\Desktop\\dev\\atronet-front\\src\\mocks/**)",
+      "Read(/C:\\Users\\aetech\\Desktop\\dev\\atronet-front\\src\\shared\\lib/**)",
+      "Read(/C:\\Users\\aetech\\Desktop\\dev\\atronet-front\\src\\contexts/**)",
+      "Read(/C:\\Users\\aetech\\Desktop\\dev\\atronet-front\\src\\entities\\users/**)",
+      "Read(/C:\\Users\\aetech\\Desktop\\dev\\atronet-front\\src\\entities\\users/**)",
+      "Read(/C:\\Users\\aetech\\Desktop\\dev\\atronet-front\\src\\entities\\users/**)",
+      "Read(/C:\\Users\\aetech\\Desktop\\dev\\atronet-front\\src\\contexts/**)",
+      "Read(/C:\\Users\\aetech\\Desktop\\dev\\atronet-front\\src\\pages/**)",
+      "Read(/C:\\Users\\aetech\\Desktop\\dev\\atronet-front\\src/**)",
+      "Read(/C:\\Users\\aetech\\Desktop\\dev\\atronet-front\\src\\shared\\ui/**)",
+      "Read(/C:\\Users\\aetech\\Desktop\\dev\\atronet-front\\src\\shared\\ui/**)",
+      "Read(/C:\\Users\\aetech\\Desktop\\dev\\atronet-front\\src\\shared\\hooks/**)",
+      "Read(/C:\\Users\\aetech\\Desktop\\dev\\atronet-front\\src\\shared\\ui/**)",
+      "Read(/C:\\Users\\aetech\\Desktop\\dev\\atronet-front\\src\\contexts/**)",
+      "Read(/C:\\Users\\aetech\\Desktop\\dev\\atronet-front\\src\\entities\\users/**)",
+      "Read(/C:\\Users\\aetech\\Desktop\\dev\\atronet-front\\src\\entities\\users/**)",
+      "Read(/C:\\Users\\aetech\\Desktop\\dev\\atronet-front\\src/**)",
+      "Read(/C:\\Users\\aetech\\Desktop\\dev\\atronet-front\\src\\mocks/**)",
+      "Read(/C:\\Users\\aetech\\Desktop\\dev\\atronet-front\\src\\entities\\users/**)",
+      "Read(/C:\\Users\\aetech\\Desktop\\dev\\atronet-front\\src\\contexts/**)",
+      "Read(/C:\\Users\\aetech\\Desktop\\dev\\atronet-front\\src\\entities\\users/**)",
+      "Read(/C:\\Users\\aetech\\Desktop\\dev\\atronet-front\\src\\shared\\api/**)",
+      "Read(/C:\\Users\\aetech\\Desktop\\dev\\atronet-front\\src/**)",
+      "Read(/C:\\Users\\aetech\\Desktop\\dev\\atronet-front\\src\\mocks/**)",
+      "Read(/C:\\Users\\aetech\\Desktop\\dev\\atronet-front\\src\\entities\\users/**)",
+      "Read(/C:\\Users\\aetech\\Desktop\\dev\\atronet-front\\src\\contexts/**)",
+      "Read(/C:\\Users\\aetech\\Desktop\\dev\\atronet-front\\src\\entities\\users/**)",
+      "Read(/C:\\Users\\aetech\\Desktop\\dev\\atronet-front\\src\\entities\\users/**)",
+      "Read(/C:\\Users\\aetech\\Desktop\\dev\\atronet-front\\src\\entities\\users/**)"
+    ],
+    "deny": []
+  }
+}
